@@ -7,6 +7,10 @@
 body{
     background-color: #f8fbfc;
 }
+ul, li, a{
+padding: 0;
+margin: 0;
+}
 a:focus,button:focus,input:focus{
     outline: 2px dotted #000 !important;
     box-shadow: 0 0 0 2px #fff !important;
@@ -32,8 +36,8 @@ a:focus,button:focus,input:focus{
     align-items: center;
     }
     .logo-col a,.footer-social-icons a,.logo-col-footer a{
-text-decoration: none;
-display: inline-block;
+    text-decoration: none;
+    display: inline-block;
     }
     
     .logo-col div{
@@ -75,6 +79,52 @@ color: #05060A;
 display: block;
 padding: 10px 30px;
 }
+
+/* Mobile Menu  */
+@media (min-width:980px){
+    .bi-list{
+        display:none;
+        font-size: 45px;
+        color: #000;
+        cursor: pointer;
+    }
+}
+@media (max-width:980px){
+    .bi-list{
+        font-size: 45px;
+        color: #000;
+        cursor: pointer;
+    }
+    .mobile-menu-col{
+        width: 20%;
+        justify-content: center;
+    }
+    .logo-col{
+        width: 80%;
+    }
+    .mobile-menu{
+        display: none;
+        position: absolute;
+        left: 0;
+        float: none !important;
+        background: #fff;
+        width: 100vw;
+        height:305px;
+    }
+    .mobile-menu.active{
+        display: block;
+    }
+    .mobile-menu li{
+        display: block;
+        line-height: 55px;
+        text-align: center;
+    }
+    .mobile-menu li a:hover{
+        background: rgba(62, 130, 252, 0.35);
+        margin: 0 30px;
+    }
+}
+
 .header-banner-sec{
     display: flex;
 }
@@ -113,6 +163,54 @@ font-size: 18px;
 border: 1px solid #3E82FC;
 cursor: pointer;
 }
+/*Mobile Header Banner*/
+@media(max-width:980px){
+
+    .header-banner-sec{
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        padding-top: 0 !important;
+    }
+    .banner-heading h1{
+        font-size: 50px;
+    }
+    .banner-text-sec{
+        margin-bottom: 30px;
+    }
+
+    .header-sec-3-pa{
+    flex-direction:column;
+    text-align: center;
+}
+    .header-sec-3-pa .pa-text{
+        width: 50%;
+        margin: auto;
+    }
+    .banner-img img{
+        width: 50%;
+    }
+    .header-pa{
+    height: auto !important;
+    }
+    .header-closing-text p{
+        width: 90%;
+        margin: auto;
+    }
+    .header-closing-text{
+        height: auto !important;
+    }
+}
+@media(max-width:500px){
+    .header-sec-3-pa .pa-text{
+        width: 100%;
+    }
+    .header-sec-3-pa, .header-pa{
+        padding-left:0 !important;
+        padding-right: 0 !important;
+    }
+}
+
 .header-second-ctn,.header-second-vdo:hover{
     background-color: #3E82FC;
     color: #fff;
@@ -122,10 +220,10 @@ cursor: pointer;
     color:#3E82FC ;
 }
 
-.banner-text-sec a{
+.banner-text-sec button{
     display: inline-block;
     width: fit-content;
-    margin-right: 10px;
+    margin: 10px;
 }
 
 .header-sec-3-pa
@@ -211,6 +309,34 @@ cursor: pointer;
         max-width: 1200px;
         margin: auto;
     }
+
+        /* section 2 mobile menu */
+
+        @media(max-width:980px){
+            .sec-2-one-div{
+                flex-direction: column;
+                text-align: center;
+            }
+            .sec-2-one p{
+                width: 75%;
+                margin: auto;
+            }
+           .sec-2 .image-container img, .sec-3 .image-container img{
+            width: 50%;
+           }
+        }
+        @media(max-width:500px){
+            .sec-2-one h2{
+                font-size: 40px !important;
+            }
+            .sec-2-two .clients img{
+                width: 70%;
+            }
+            .sec-3-one h2, .sec-3-two h2{
+                font-size: 40px !important;
+            }
+        }
+
     .sec-2-one{
         background-image: url("sec-2-one-bg.jpg");
      }
@@ -247,7 +373,7 @@ cursor: pointer;
         color: #05060A;
     }
     .sec-2-two{
-        padding: 100px 0;
+        padding: 50px 0;
         width: 100%;
         max-width: 1200px;
         margin: auto;
@@ -293,6 +419,32 @@ cursor: pointer;
     max-width: 1200px;
     margin: auto;
 }
+
+/* section 3 mobile view */
+
+    @media(max-width:980px){
+        .sec-3-one-div{
+            flex-direction: column;
+            text-align: center;
+            width: 90%;
+            margin: auto;
+        }
+        .sec-3-one-div .text-container{
+            margin-bottom: 30px;
+        }
+        .sec-3-two-div{
+            flex-direction: column-reverse;
+            text-align: center;
+            width: 90%;
+            margin: auto;
+        }
+        .sec-3-two-div .text-container{
+            margin-bottom: 30px;
+        }
+        .sec-3-two{
+            margin-top: 60px !important;
+        }
+    }
 .sec-3-two{
     margin-top: 150px;
 }
@@ -349,7 +501,20 @@ cursor: pointer;
              }
      .sec-4{
       background-color: #f8fbfc;
-      padding: 100px 0;
+      padding: 50px 0;
+    }
+
+    /* section 4 mobile view  */
+    @media(max-width:980px){
+        .sec-4-div{
+            width: 90%;
+        }
+        .sec-4 #carouselExampleCaptions .carousel-item{
+            width: 100% !important;
+        }
+        .d-none{
+            display: block !important;
+        }
     }
   .sec-4 .carousel-inner{
     display: flex;
@@ -453,6 +618,44 @@ cursor: pointer;
         background-color: #eaf2fe;
         padding: 100px 0 0 0;
     }
+
+        /* section 5 mobile menu */
+
+        @media(max-width:980px){
+            .sec-5-div{
+                width: 80% !important;
+            }
+            .sec-5 .subscribe-form form{
+                gap: 5px !important;
+            }
+            .sec-5 .subscribe-form input[type=email] {
+                padding: 16px 6px !important;
+                width: 204px !important;
+                height: 45px !important;
+                padding-left: 25px !important;
+            }
+            .sec-5 .subscribe-form button {
+                padding: 10px 15px !important;
+                gap: 10px !important;
+                width: 100px !important;
+                height: 45px !important;
+                font-size: 14px !important;
+            }
+            .sec-5 .subscribe-form .bi-envelope {
+                left: 24px !important;
+                top: 0px !important;
+                            }
+                #error-msg{
+                    padding-left: 100px !important;
+                }
+            }
+        @media(max-width:500px){
+            #error-msg{
+                padding-left: 0 !important;
+
+            }
+        }
+
     .sec-5-div{
         width: 40%;
         max-width: 1200px;
@@ -510,11 +713,18 @@ cursor: pointer;
     }
     .sec-5 .subscribe-form .bi-envelope{ 
         position: relative;
-        left: 80px;
-        top: 2px;
+        left: 42px;
+        top: 0px;
         font-size: 16px;
         color: #3E82FC;
     }
+    .email-container{
+   display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
            .sec-5 .subscribe-form button{
         display: flex;
         flex-direction: row;
@@ -533,11 +743,15 @@ cursor: pointer;
         font-size: 18px;
 
     }
+    .sec-5 .subscribe-form button:hover{
+        background: transparent;
+        color: #05060A;
+    }
     /* Email validation */
     #error-msg{
-        color:#fe2c54;
+        color:#C73C3C;
         padding-top: 10px;
-        padding-left: 40px;
+        padding-left: 50px;
         display: none;
     }
 
@@ -551,8 +765,44 @@ cursor: pointer;
         max-width: 1200px;
         margin: auto;
         justify-content: center;
-        padding: 100px 0;
+        padding: 50px 0;
     }
+
+    /* footer section mobile view */
+        @media(max-width:980px){
+            .footer{
+                flex-direction: column;
+                width: 90%;
+                align-items: center;
+            }
+            .footer-Rsec {
+                width: 90% !important;
+                margin: auto;
+                margin-bottom: 30px; 
+                text-align: center;             
+            }
+            .footer-Rsec-div{
+                width: 100% !important;
+            }
+            .footer-Lsec{
+                width: 100%;
+                margin: auto;
+                justify-content: center;
+            }
+        }
+
+        @media(max-width:500px){
+            .footer-Lsec{
+                column-gap: 20px !important;
+            }
+            .footer-Lsec ul{
+                padding-top: 0 !important;
+            }
+            .footer-Lsec ul li a{
+                padding: 5px 0 !important;
+            }
+        }
+
     .footer-Rsec{
         width: 50%;
     }
@@ -617,6 +867,6 @@ cursor: pointer;
         font-size: 20px;
          line-height: 26px;
          color: #5D616F;
-         padding: 30px 0;
+         padding: 30px 10px;
          margin-bottom: 0 !important;
     }
