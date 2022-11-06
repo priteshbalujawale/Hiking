@@ -27,3 +27,12 @@ function sub(event){
 function popup(){
     alert("massage sent");
 }
+
+
+// Mobile Menu
+var mobilebar=document.getElementById("mobile-menu-bar");
+var mobile_menu=document.getElementById("mobile-menu");
+
+function show(){
+    mobile_menu.classList.toggle('active');
+}
